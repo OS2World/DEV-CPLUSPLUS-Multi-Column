@@ -1,0 +1,23 @@
+DLGINCLUDE 1 "mcol.h"
+
+DLGTEMPLATE IDD_MCOL LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Multi-Column List Box Demo", IDD_MCOL, 15, 16, 361, 165, 
+            WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LTEXT           "Numeric Only", -1, 15, 143, 72, 8
+        CONTROL         "", DID_FIELD1, 17, 129, 87, 8, "9",
+                        WS_TABSTOP | WS_GROUP | WS_VISIBLE
+        LTEXT           "Alpha Only", -1, 113, 143, 72, 8
+        CONTROL         "", DID_FIELD2, 110, 129, 87, 8, "a",
+                        WS_TABSTOP | WS_GROUP | WS_VISIBLE
+        LTEXT           "Alpha/Numeric Force to Upper", -1, 203, 143, 81, 17, 
+                        DT_WORDBREAK
+        CONTROL         "", DID_FIELD3, 203, 129, 87, 8, "N",
+                        WS_TABSTOP | WS_GROUP | WS_VISIBLE
+        PUSHBUTTON      "~Add to List", DID_ADD, 297, 126, 59, 14, WS_TABSTOP
+        CONTROL         "Heading", DID_HEADING, 17, 104, 279, 16, "Heading",
+                        WS_GROUP | WS_VISIBLE
+        LISTBOX         DID_LISTBOX, 17, 16, 286, 88, WS_TABSTOP | LS_OWNERDRAW | LS_HORZSCROLL
+    END
+END

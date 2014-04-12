@@ -1,0 +1,3 @@
+#include  <os2.h>
+#include  "mcol.h"
+RCINCLUDE  mcol.dlg
